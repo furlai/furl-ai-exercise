@@ -1,5 +1,3 @@
-from langchain_core.runnables import RunnableLambda
-
 from furl_ai_exercise.models import ReleaseInfo, SoftwareQuery
 from furl_ai_exercise.service import run_release_graph
 from tests.scenario_data import (
@@ -9,7 +7,7 @@ from tests.scenario_data import (
 )
 
 
-def test_firefox_windows10_pinned_release():
+def test_firefox_windows10_pinned_release(llm):
     query = SoftwareQuery(
         vendor="Mozilla",
         software="Firefox",
@@ -18,14 +16,6 @@ def test_firefox_windows10_pinned_release():
         cpu_arch="x86_64",
         version=PINNED_WINDOWS10_VERSION,
     )
-    response = (
-        "{\n"
-        f"  \"release_notes_url\": \"{PINNED_WINDOWS10_RELEASE_NOTES_URL}\",\n"
-        f"  \"download_url\": \"{PINNED_WINDOWS10_DOWNLOAD_URL}\",\n"
-        f"  \"version\": \"{PINNED_WINDOWS10_VERSION}\"\n"
-        "}"
-    )
-    llm = RunnableLambda(lambda _prompt: response)
 
     result = run_release_graph(query, llm)
 
