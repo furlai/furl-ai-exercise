@@ -75,7 +75,9 @@ Graph state (`ReleaseState`):
 
 ## Submission
 
-Submit the assignment to careers _at_ furl _dot_ ai. Before submission, run `poetry run pytest` to validate the test cases pass (they mail fail due to nuanced mistakes, like slight URL mismatches, which is fine--but significant differences in URLs for download links etc. will be highly considered as part of scoring). Zip up the entire directory, and include a testcases.txt file containing the result of your run of `poetry run pytest` (note that it'll be executed in a sandbox by Furl). Include chatlog.txt if you used an agentic coding tool such as Claude Code, Cursor, Ampcode, Codex, etc.
+Submit the assignment to careers _at_ furl _dot_ ai. Before submission, run `poetry run pytest` to validate the test cases pass (they mail fail due to nuanced mistakes, like slight URL mismatches, which is fine--but significant differences in URLs for download links etc. will be highly considered as part of scoring). Zip up the entire directory, and include a testcases.txt file containing the result of your run of `poetry run pytest` (note that it'll be executed in a sandbox by Furl). Include chatlog.txt if you used an agentic coding tool such as Claude Code, Cursor, Ampcode, Codex, etc. Please also provide details on any environment variables you set (DO NOT INCLUDE KEYS) in your submission (i.e., whether you changed the LLM provider, model, or which LLM provider you used to execute the tests).
+
+See tests/conftest.py for LLM provider details. 
 
 ## LLM configuration
 
