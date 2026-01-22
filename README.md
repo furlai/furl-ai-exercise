@@ -43,7 +43,7 @@ helpers (`build_prompt`, `build_release_graph`) for convenience, but they are no
 Implementation expectations for `run_release_graph`:
 
 - Build or reuse a `StateGraph` that accepts the `ReleaseState` keys: `query` and `response`
-- Invoke the graph with the incoming `SoftwareQuery` and capture the model output string
+- Invoke the graph with the incoming `SoftwareQuery` and capture the model output
 
 
 Avoid modifying tests or the data models; the exercise is intentionally scoped to the graph execution.
