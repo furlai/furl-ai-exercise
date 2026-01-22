@@ -97,3 +97,7 @@ Refer to the model provider docs for exact environment variables.
 - Ideal imementations will not overfit to Firefox, and instead will be generalizable across any software / OS.
 - Python version is defined in `pyproject.toml` (`^3.12`).
 - Agentic coding tools are allowed (Codex, Claude Code, Cursor, etc.) as long as you submit the full chat log with your assignment.
+- Scoring will be based on:
+  - Whether the links returned are valid and relevant (accuracy)
+  - How generalizable the implementation is (it'll be tested against cases not in the test case list)
+  - The token count / total time needed for the implementation to run
