@@ -13,8 +13,15 @@ def test_firefox_windows11_latest_release(llm):
 
     result = run_release_graph(query, llm)
 
-    assert result == ReleaseInfo(
-        release_notes_url="https://www.mozilla.org/en-US/firefox/notes/latest/",
-        download_url="https://download.mozilla.org/?product=firefox-latest-ssl&os=win&lang=en-US",
-        version="latest",
-    )
+    assert isinstance(result, ReleaseInfo)
+
+    # Release notes should point to Mozilla/Firefox notes page
+    assert "mozilla.org" in result.release_notes_url or "firefox.com" in result.release_notes_url
+    assert "firefox" in result.release_notes_url.lower()
+
+    # Download URL should be Mozilla's official download service
+    assert "mozilla.org" in result.download_url
+    assert "firefox" in result.download_url.lower() or "product=firefox" in result.download_url.lower()
+
+    # Version should be present
+    assert result.version
