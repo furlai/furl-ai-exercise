@@ -73,19 +73,13 @@ Graph state (`ReleaseState`):
 - `query` (`SoftwareQuery`)
 - `response` (str)
 
+## Submission
+
+Submit the assignment to careers <at> furl <dot> ai. Before submission, run `poetry run pytest` to validate the test cases pass (they mail fail due to nuanced mistakes, like slight URL mismatches, which is fine--but significant differences in URLs for download links etc. will be highly considered as part of scoring). Zip up the entire directory, and include a testcases.txt file containing the result of your run of `poetry run pytest` (note that it'll be executed in a sandbox by Furl). Include chatlog.txt if you used an agentic coding tool such as Claude Code, Cursor, Ampcode, Codex, etc.
+
 ## LLM configuration
 
-This project uses LangChain + LangGraph. Bring any LangChain-compatible chat model or runnable.
-
-Example (install provider package yourself):
-
-```python
-from langchain_openai import ChatOpenAI
-from furl_ai_exercise.service import run_release_graph
-
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
-result = run_release_graph(query, llm)
-```
+This project uses LangChain + LangGraph. Bring any LangChain-compatible chat model or runnable. Anthropic and OpenAI are provided out of the box.
 
 Provide your provider's API key as required (e.g. `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`).
 Refer to the model provider docs for exact environment variables.
