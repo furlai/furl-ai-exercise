@@ -44,10 +44,11 @@ Implementation expectations for `run_release_graph`:
 
 - Build or reuse a `StateGraph` that accepts the `ReleaseState` keys: `query` and `response`
 - Invoke the graph with the incoming `SoftwareQuery` and capture the model output string
-- Parse the JSON-only model response into `ReleaseInfo` and return it
-- Keep the behavior compatible with a fake `RunnableLambda` that returns a raw string
 
-Avoid modifying tests or the data models; the exercise is intentionally scoped to the graph execution and JSON parsing.
+
+Avoid modifying tests or the data models; the exercise is intentionally scoped to the graph execution.
+
+You will need to create a graph of agents / subagents to oerform research and fulfill the task.
 
 ## Input / output shape
 
