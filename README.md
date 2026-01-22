@@ -98,7 +98,6 @@ Refer to the model provider docs for exact environment variables.
 
 ## Notes
 
-- The test uses a fake runnable, so it runs without any real API calls.
-- Keep outputs strictly JSON when calling the model.
+- Ideal imementations will not overfit to Firefox, and instead will be generalizable across any software / OS.
 - Python version is defined in `pyproject.toml` (`^3.12`).
 - Agentic coding tools are allowed (Codex, Claude Code, Cursor, etc.) as long as you submit the full chat log with your assignment.
