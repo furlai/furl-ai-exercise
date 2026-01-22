@@ -36,7 +36,8 @@ Fill in the TODO in `src/furl_ai_exercise/service.py` inside `run_release_graph`
 - Build and execute the LangGraph graph using a LangChain-compatible model
 - Parse the JSON response into `ReleaseInfo`
 
-The goal is for the test to pass with the provided fake LLM response.
+The goal is for the test to pass by implementing an agentic system that performs research and sarisfies the test cases.
+
 You may update the prompt and graph structure as you see fit. The scaffolding provides
 helpers (`build_prompt`, `build_release_graph`) for convenience, but they are not mandatory.
 
@@ -48,7 +49,7 @@ Implementation expectations for `run_release_graph`:
 
 Avoid modifying tests or the data models; the exercise is intentionally scoped to the graph execution.
 
-You will need to create a graph of agents / subagents to oerform research and fulfill the task.
+You will need to create a graph of agents / subagents to perform research and fulfill the task.
 
 ## Input / output shape
 
