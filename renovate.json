@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "dependencyDashboardApproval": true,
+  "assigneesFromCodeOwners": true,
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "minimumReleaseAge": "3 days",
+  "osvVulnerabilityAlerts": true,
+  "pinDigests": true
+}
