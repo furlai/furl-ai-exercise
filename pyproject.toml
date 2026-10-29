@@ -9,7 +9,7 @@ packages = [{ include = "furl_ai_exercise", from = "src" }]
 python = "^3.12"
 langchain = "1.2.6"
 langgraph = "1.0.6"
-langchain-openai = "1.1.7"
+langchain-openai = "1.1.14"
 langchain-core = "1.2.7"
 pydantic = "^2.7.0"
 
